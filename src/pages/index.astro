@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "../components/hero";
+import { Programs } from "../components/programs";
+import { Instructors } from "../components/instructors";
+import { Schedule } from "../components/schedule";
+import Gallery from "../components/gallery.astro";
+import { CTA } from "../components/cta";
+import Navigation from "../components/navigation";
+import WhatsAppButton from "../components/WhatsAppButton";
+---
+
+<Layout>
+  <main class="min-h-screen">
+    <Navigation client:load />
+    <Hero />
+    <Programs />
+    <Instructors />
+    <Schedule />
+    <Gallery />
+    <CTA client:load />
+    <WhatsAppButton client:load />
+  </main>
+</Layout>
+

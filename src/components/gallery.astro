@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import taekwondoTraining from "../../public/taekwondo-training-dojang-students.jpg";
+import taekwondoHighKick from "../../public/taekwondo-high-kick-action.jpg";
+import taekwondoChildren from "../../public/taekwondo-children-class-training.jpg";
+import taekwondoBelt from "../../public/taekwondo-belt-ceremony-promotion.jpg";
+import taekwondoSparring from "../../public/taekwondo-sparring-competition.jpg";
+import taekwondoForms from "../../public/taekwondo-forms-poomsae.jpg";
+
+const images = [
+  {
+    src: taekwondoTraining,
+    alt: "Entrenamiento en el dojang",
+    span: "md:col-span-2",
+  },
+  {
+    src: taekwondoHighKick,
+    alt: "Patada de taekwondo",
+    span: "md:col-span-1",
+  },
+  {
+    src: taekwondoChildren,
+    alt: "Clase de niños",
+    span: "md:col-span-1",
+  },
+  {
+    src: taekwondoBelt,
+    alt: "Ceremonia de cinturones",
+    span: "md:col-span-2",
+  },
+  {
+    src: taekwondoSparring,
+    alt: "Competición",
+    span: "md:col-span-2",
+  },
+  {
+    src: taekwondoForms,
+    alt: "Formas (Poomsae)",
+    span: "md:col-span-1",
+  },
+];
+---
+
+<section id="galeria" class="py-24">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl md:text-6xl font-bold mb-4 text-balance text-foreground">Nuestra Comunidad</h2>
+      <p class="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+        Momentos que capturan el espíritu de Sin Ryong Kwan
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px]">
+      {images.map((image) => (
+        <div class={`${image.span} relative overflow-hidden rounded-lg group cursor-pointer`}>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            width={800}
+            height={600}
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <p class="text-primary-foreground font-semibold text-lg">{image.alt}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
