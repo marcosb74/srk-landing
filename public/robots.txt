@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://srk-tkd.com/sitemap-index.xml

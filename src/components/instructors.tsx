@@ -17,18 +17,20 @@ export function Instructors() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-4 text-balance text-foreground">
-            Nuestros Instructores
+            Nuestro Maestro
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Aprendé de maestros con décadas de experiencia
+            Estudiamos y entrenamos con nuestro director de la escuela para
+            conservar, transmitir los valores y técnicas del taekwondo
+            tradicional.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {instructors.map((instructor, index) => (
             <Card
               key={index}
-              className="overflow-hidden group hover:shadow-2xl transition-all duration-300"
+              className="w-full max-w-sm overflow-hidden group hover:shadow-2xl transition-all duration-300"
             >
               <div className="relative h-80 overflow-hidden">
                 <div

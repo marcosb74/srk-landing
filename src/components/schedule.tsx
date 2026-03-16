@@ -7,7 +7,7 @@ const schedule = [
     classes: [
       {
         time: "17:00 - 19:00",
-        class: "Niños Principiantes",
+        class: "Niños Principiantes - Todas las edades",
       },
       {
         time: "20:00 - 21:00",
@@ -22,7 +22,7 @@ const schedule = [
     classes: [
       {
         time: "10:15 - 12:00",
-        class: "Adultos",
+        class: "Adultos y Adolescentes avanzados",
       },
     ],
   },

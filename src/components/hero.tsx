@@ -31,6 +31,12 @@ export function Hero() {
             SIN RYONG KWAN🐉
           </h1>
           <p
+            className="text-xl md:text-2xl font-medium mb-2 text-foreground/90 animate-fade-in-up"
+            style={{ animationDelay: "0.15s" }}
+          >
+            Taekwondo en Villa Soldati
+          </p>
+          <p
             className="text-xl md:text-2xl mb-8 text-muted-foreground leading-relaxed text-pretty animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
@@ -42,18 +48,26 @@ export function Hero() {
             style={{ animationDelay: "0.3s" }}
           >
             <Button
+              asChild
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
-              Clase Gratis
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              <a
+                href="https://www.instagram.com/sinryongkwan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Clase de Prueba
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
               className="text-lg px-8 py-6 border-2 bg-transparent transition-all duration-300 hover:scale-105 hover:bg-primary/10"
             >
-              Ver Horarios
+              <a href="#horarios">Ver Horarios</a>
             </Button>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, ArrowRight, Instagram } from "lucide-react";
 
 export function CTA() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="unete" className="py-24 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5" />
 

@@ -5,12 +5,16 @@ import { Programs } from "../components/programs";
 import { Instructors } from "../components/instructors";
 import { Schedule } from "../components/schedule";
 import Gallery from "../components/gallery.astro";
+import Novedades from "../components/Novedades.astro";
 import { CTA } from "../components/cta";
 import Navigation from "../components/navigation";
-import WhatsAppButton from "../components/WhatsAppButton";
+import InstagramButton from "../components/InstagramButton";
 ---
 
-<Layout>
+<Layout
+  title="Taekwondo en Villa Soldati | Sin Ryong Kwan - Academia"
+  description="Academia de taekwondo en Villa Soldati. Clases para niños, adolescentes y adultos. Disciplina, respeto y superación."
+>
   <main class="min-h-screen">
     <Navigation client:load />
     <Hero />
@@ -18,8 +22,9 @@ import WhatsAppButton from "../components/WhatsAppButton";
     <Instructors />
     <Schedule />
     <Gallery />
+    <Novedades />
     <CTA client:load />
-    <WhatsAppButton client:load />
+    <InstagramButton client:load />
   </main>
 </Layout>
 

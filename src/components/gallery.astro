@@ -1,41 +1,41 @@
 ---
 import { Image } from "astro:assets";
-import taekwondoTraining from "../../public/taekwondo-training-dojang-students.jpg";
-import taekwondoHighKick from "../../public/taekwondo-high-kick-action.jpg";
-import taekwondoChildren from "../../public/taekwondo-children-class-training.jpg";
-import taekwondoBelt from "../../public/taekwondo-belt-ceremony-promotion.jpg";
-import taekwondoSparring from "../../public/taekwondo-sparring-competition.jpg";
-import taekwondoForms from "../../public/taekwondo-forms-poomsae.jpg";
+import clase01 from "../../public/clase01.jpeg";
+import clase02 from "../../public/clase02.jpeg";
+import examen01 from "../../public/examen01.JPG";
+import examen02 from "../../public/examen02.JPG";
+import examen03 from "../../public/examen03.JPG";
+import examen04 from "../../public/examen04.JPG";
 
 const images = [
   {
-    src: taekwondoTraining,
+    src: clase01,
+    alt: "Clase en Sin Ryong Kwan",
+    span: "md:col-span-2",
+  },
+  {
+    src: clase02,
     alt: "Entrenamiento en el dojang",
-    span: "md:col-span-2",
-  },
-  {
-    src: taekwondoHighKick,
-    alt: "Patada de taekwondo",
     span: "md:col-span-1",
   },
   {
-    src: taekwondoChildren,
-    alt: "Clase de niños",
+    src: examen01,
+    alt: "Examen de cinturones",
     span: "md:col-span-1",
   },
   {
-    src: taekwondoBelt,
-    alt: "Ceremonia de cinturones",
+    src: examen02,
+    alt: "Examen de formas",
     span: "md:col-span-2",
   },
   {
-    src: taekwondoSparring,
-    alt: "Competición",
+    src: examen03,
+    alt: "Momento del examen",
     span: "md:col-span-2",
   },
   {
-    src: taekwondoForms,
-    alt: "Formas (Poomsae)",
+    src: examen04,
+    alt: "Defensa personal",
     span: "md:col-span-1",
   },
 ];
@@ -44,7 +44,7 @@ const images = [
 <section id="galeria" class="py-24">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
-      <h2 class="text-5xl md:text-6xl font-bold mb-4 text-balance text-foreground">Nuestra Comunidad</h2>
+      <h2 class="text-5xl md:text-6xl font-bold mb-4 text-balance text-foreground">Nuestra Escuela</h2>
       <p class="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
         Momentos que capturan el espíritu de Sin Ryong Kwan
       </p>

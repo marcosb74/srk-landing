@@ -55,8 +55,14 @@ export default function Navigation() {
             >
               Galería
             </a>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
-              Únete Ahora
+            <a
+              href="#novedades"
+              className="text-foreground hover:text-primary transition-all duration-300 hover:scale-105"
+            >
+              Novedades
+            </a>
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              <a href="#unete">Únete Ahora</a>
             </Button>
           </div>
 
@@ -112,8 +118,15 @@ export default function Navigation() {
             >
               Galería
             </a>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full transition-all duration-300 hover:scale-105">
-              Únete Ahora
+            <a
+              href="#novedades"
+              className="text-foreground hover:text-primary transition-all duration-300 hover:translate-x-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Novedades
+            </a>
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full transition-all duration-300 hover:scale-105">
+              <a href="#unete" onClick={() => setIsOpen(false)}>Únete Ahora</a>
             </Button>
           </div>
         </div>

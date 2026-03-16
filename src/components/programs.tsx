@@ -1,39 +1,59 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Users, Zap, Trophy, Target } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Users, Zap, Trophy, Target } from "lucide-react";
 
 const programs = [
   {
     icon: Users,
     title: "Niños (5-12 años)",
-    description: "Desarrollo físico y mental a través del taekwondo. Mejora la concentración, disciplina y confianza.",
-    features: ["Clases 3x semana", "Cinturones progresivos", "Torneos escolares"],
+    description:
+      "Desarrollo físico y mental a través del taekwondo. Mejora la concentración, disciplina y confianza.",
+    features: ["Clases 3x semana", "Cinturones progresivos", "Torneos"],
   },
   {
     icon: Zap,
     title: "Adolescentes",
-    description: "Técnicas avanzadas y preparación para competiciones. Énfasis en respeto y liderazgo.",
-    features: ["Entrenamiento intensivo", "Competencias regionales", "Defensa personal"],
+    description:
+      "Técnicas avanzadas y preparación para competiciones. Énfasis en respeto y liderazgo.",
+    features: ["Entrenamiento intensivo", "Competiciones", "Defensa personal"],
   },
   {
     icon: Trophy,
     title: "Adultos",
-    description: "Fitness, defensa personal y crecimiento personal. Adaptado a todos los niveles.",
-    features: ["Horarios flexibles", "Acondicionamiento físico", "Técnicas tradicionales"],
+    description:
+      "Fitness, defensa personal y crecimiento personal. Adaptado a todos los niveles.",
+    features: [
+      "Horarios flexibles",
+      "Mucha actividad física",
+      "Taekwondo tradicional",
+    ],
   },
   {
     icon: Target,
     title: "Competición",
-    description: "Entrenamiento de élite para atletas competitivos. Preparación para torneos nacionales.",
-    features: ["Entrenamiento personalizado", "Estrategia de combate", "Apoyo nutricional"],
+    description:
+      "Competiciones en los mas altos niveles; exhibiciones, formas y combate.",
+    features: [
+      "Entrenamiento personalizado",
+      "Estrategia de combate",
+      "Valores tradicionales",
+    ],
   },
-]
+];
 
 export function Programs() {
   return (
     <section id="programas" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 text-balance text-foreground">Nuestros Programas</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 text-balance text-foreground">
+            Nuestros Programas
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Ofrecemos programas adaptados para todas las edades y niveles
           </p>
@@ -53,7 +73,9 @@ export function Programs() {
                 <CardTitle className="text-2xl transition-colors duration-300 group-hover:text-primary">
                   {program.title}
                 </CardTitle>
-                <CardDescription className="text-base leading-relaxed">{program.description}</CardDescription>
+                <CardDescription className="text-base leading-relaxed">
+                  {program.description}
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
@@ -73,6 +95,5 @@ export function Programs() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

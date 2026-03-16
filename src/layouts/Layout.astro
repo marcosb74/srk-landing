@@ -1,23 +1,77 @@
 ---
 import "../styles/globals.css";
 
+const SITE_URL = "https://srk-tkd.com";
+
 interface Props {
   title?: string;
   description?: string;
+  /** Ruta actual para canonical (ej: "" para home, "/horarios" para otra página) */
+  canonicalPath?: string;
+  /** Imagen para redes (URL absoluta). Por defecto logo/og. */
+  ogImage?: string;
 }
 
 const {
-  title = "Sin Ryong Kwan - Academia de Taekwondo",
-  description = "Descubre el arte marcial del taekwondo. Fortalece tu cuerpo, disciplina tu mente en Sin Ryong Kwan.",
+  title = "Taekwondo en Villa Soldati | Sin Ryong Kwan - Academia",
+  description = "Academia de taekwondo en Villa Soldati. Clases para niños, adolescentes y adultos. Disciplina, respeto y superación. Clase de prueba gratis en Sin Ryong Kwan.",
+  canonicalPath = "",
+  ogImage = `${SITE_URL}/logo.png`,
 } = Astro.props;
+
+const canonical = `${SITE_URL}${canonicalPath || ""}`.replace(/\/$/, "") || SITE_URL;
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Sin Ryong Kwan - Academia de Taekwondo",
+  "description": description,
+  "url": canonical,
+  "image": ogImage,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Villa Soldati",
+    "addressRegion": "CABA",
+    "addressCountry": "AR"
+  },
+  "areaServed": "Villa Soldati, Buenos Aires",
+  "sport": "Taekwondo",
+  "potentialAction": {
+    "@type": "JoinAction",
+    "target": {
+      "@type": "EntryPoint",
+      "url": canonical,
+      "actionPlatform": "https://schema.org/WhatsApp"
+    }
+  }
+};
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="taekwondo villa soldati, taekwondo soldati, academia taekwondo CABA, Sin Ryong Kwan, taekwondo niños soldati, taekwondo adultos Buenos Aires" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Sin Ryong Kwan Taekwondo" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <link rel="icon" type="image/png" href="/icon-light-32x32.png" media="(prefers-color-scheme: light)" />
     <link rel="icon" type="image/png" href="/icon-dark-32x32.png" media="(prefers-color-scheme: dark)" />
@@ -26,7 +80,9 @@ const {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <!-- Datos estructurados para búsqueda local -->
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
   </head>
   <body class="font-sans antialiased">
     <slot />
