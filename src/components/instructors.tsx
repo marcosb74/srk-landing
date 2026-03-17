@@ -3,7 +3,7 @@ import { Award, Star } from "lucide-react";
 
 const instructors = [
   {
-    name: "Kwanjang-nim Marcelo Barreiros",
+    name: "Kwan Yang Nim Marcelo Barreiros",
     rank: "7° Dan Cinturón Negro",
     specialty: "Director de la Escuela",
     experience: "35 años de experiencia",
